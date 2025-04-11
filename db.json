@@ -1,0 +1,139 @@
+{
+    "patients": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "age": 35,
+        "gender": "Male",
+        "contact": "+263 77 123 4567",
+        "email": "johndoe@example.com",
+        "address": "123 Harare Street, Harare, Zimbabwe",
+        "medicalHistory": [
+          {
+            "condition": "Hypertension",
+            "diagnosisDate": "2022-05-10",
+            "treatment": "Lisinopril 10mg daily"
+          },
+          {
+            "condition": "Type 2 Diabetes",
+            "diagnosisDate": "2021-08-15",
+            "treatment": "Metformin 500mg twice daily"
+          }
+        ],
+        "allergies": ["Penicillin"],
+        "bloodGroup": "A+"
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "age": 28,
+        "gender": "Female",
+        "contact": "+263 71 987 6543",
+        "email": "janesmith@example.com",
+        "address": "456 Bulawayo Road, Bulawayo, Zimbabwe",
+        "medicalHistory": [
+          {
+            "condition": "Asthma",
+            "diagnosisDate": "2020-03-22",
+            "treatment": "Albuterol inhaler as needed"
+          }
+        ],
+        "allergies": [],
+        "bloodGroup": "O-"
+      }
+    ],
+    "doctors": [
+      {
+        "id": 1,
+        "name": "Dr. Sarah Johnson",
+        "specialization": "Cardiologist",
+        "contact": "+263 77 111 2222",
+        "email": "sarah@example.com",
+        "availability": [
+          {
+            "day": "Monday",
+            "startTime": "09:00 AM",
+            "endTime": "05:00 PM"
+          },
+          {
+            "day": "Wednesday",
+            "startTime": "09:00 AM",
+            "endTime": "05:00 PM"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Dr. Michael Brown",
+        "specialization": "Pulmonologist",
+        "contact": "+263 77 333 4444",
+        "email": "michael@example.com",
+        "availability": [
+          {
+            "day": "Tuesday",
+            "startTime": "10:00 AM",
+            "endTime": "06:00 PM"
+          },
+          {
+            "day": "Thursday",
+            "startTime": "10:00 AM",
+            "endTime": "06:00 PM"
+          }
+        ]
+      }
+    ],
+    "appointments": [
+      {
+        "id": 1,
+        "patientId": 1,
+        "patientName": "John Doe",
+        "doctorId": 1,
+        "doctorName": "Dr. Sarah Johnson",
+        "date": "2023-10-15",
+        "time": "10:00 AM",
+        "purpose": "Routine check-up",
+        "status": "Confirmed"
+      },
+      {
+        "id": 2,
+        "patientId": 2,
+        "patientName": "Jane Smith",
+        "doctorId": 2,
+        "doctorName": "Dr. Michael Brown",
+        "date": "2023-10-16",
+        "time": "02:30 PM",
+        "purpose": "Follow-up on asthma treatment",
+        "status": "Pending"
+      }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "name": "Admin User",
+        "email": "admin@example.com",
+        "password": "admin123",
+        "role": "admin"
+      },
+      {
+        "id": 2,
+        "name": "Dr. Sarah Johnson",
+        "email": "sarah@example.com",
+        "password": "doctor123",
+        "role": "doctor"
+      },
+      {
+        "id": 3,
+        "name": "Dr. Michael Brown",
+        "email": "michael@example.com",
+        "password": "doctor456",
+        "role": "doctor"
+      },
+      {
+        "id": 4,
+        "name": "John Doe",
+        "email": "johndoe@example.com",
+        "password": "patient123",
+        "role": "patient"
+      }
+    ]
+  }
