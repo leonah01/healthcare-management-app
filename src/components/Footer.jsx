@@ -21,8 +21,8 @@ const Footer = () => {
           <div className="col-md-4">
             <h5>Contact Us</h5>
             <address>
-              <p><i className="fas fa-map-marker-alt me-2"></i> 123 Medical Center Dr, Boston, MA</p>
-              <p><i className="fas fa-phone me-2"></i> (617) 555-0123</p>
+              <p><i className="fas fa-map-marker-alt me-2"></i> 123 Medical Center Dr, Harare, Zimbabwe</p>
+              <p><i className="fas fa-phone me-2"></i> (263) 555-0123</p>
               <p><i className="fas fa-envelope me-2"></i> info@healthspot.com</p>
             </address>
           </div>

@@ -1,39 +1,88 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Footer = () => {
+const AddDoctor = () => {
+  const [doctor, setDoctor] = useState({
+    name: '',
+    specialty: '',
+    contact: '',
+    email: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setDoctor(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send the data to your backend API
+    console.log('Doctor data submitted:', doctor);
+    alert('Doctor added successfully!');
+    
+    // Reset form
+    setDoctor({
+      name: '',
+      specialty: '',
+      contact: '',
+      email: ''
+    });
+  };
+
   return (
-    <footer className="footer bg-dark text-white py-4">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <h5>HealthSpot</h5>
-            <p>Your trusted healthcare partner connecting patients with top medical professionals.</p>
-          </div>
-          <div className="col-md-4">
-            <h5>Quick Links</h5>
-            <ul className="list-unstyled">
-              <li><a href="/" className="text-white">Home</a></li>
-              <li><a href="/about" className="text-white">About Us</a></li>
-              <li><a href="/doctors" className="text-white">Our Doctors</a></li>
-              <li><a href="/contact" className="text-white">Contact</a></li>
-            </ul>
-          </div>
-          <div className="col-md-4">
-            <h5>Contact Us</h5>
-            <address>
-              <p><i className="fas fa-map-marker-alt me-2"></i> 123 Medical Center Dr, Boston, MA</p>
-              <p><i className="fas fa-phone me-2"></i> (617) 555-0123</p>
-              <p><i className="fas fa-envelope me-2"></i> info@healthspot.com</p>
-            </address>
-          </div>
+    <div className="add-doctor-form">
+      <h2>Add New Doctor</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label>Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={doctor.name}
+            onChange={handleChange}
+            required
+          />
         </div>
-        <hr className="my-4 bg-light" />
-        <div className="text-center">
-          <p>&copy; {new Date().getFullYear()} HealthSpot. All rights reserved.</p>
+        
+        <div className="form-group">
+          <label>Specialty:</label>
+          <input
+            type="text"
+            name="specialty"
+            value={doctor.specialty}
+            onChange={handleChange}
+            required
+          />
         </div>
-      </div>
-    </footer>
+        
+        <div className="form-group">
+          <label>Contact Number:</label>
+          <input
+            type="tel"
+            name="contact"
+            value={doctor.contact}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <div className="form-group">
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            value={doctor.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <button type="submit" className="submit-btn">Add Doctor</button>
+      </form>
+    </div>
   );
 };
 
-export default Footer;
+export default AddDoctor;

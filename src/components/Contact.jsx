@@ -41,10 +41,10 @@ const Contact = () => {
           <div className="contact-info card h-100 p-4">
             <h2 className="mb-4">Get in Touch</h2>
             <div className="contact-item mb-3">
-              <p><i className="fas fa-map-marker-alt me-2"></i> 123 Healthcare Ave, Suite 500, Boston, MA 02115</p>
+              <p><i className="fas fa-map-marker-alt me-2"></i> 123 Healthcare Ave, Suite 500, Harare, Zim 02115</p>
             </div>
             <div className="contact-item mb-3">
-              <p><i className="fas fa-phone me-2"></i> (617) 555-0123</p>
+              <p><i className="fas fa-phone me-2"></i> (263) 555-0123</p>
             </div>
             <div className="contact-item mb-3">
               <p><i className="fas fa-envelope me-2"></i> info@healthspot.com</p>
